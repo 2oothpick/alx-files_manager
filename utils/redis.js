@@ -1,5 +1,5 @@
 const redis = require('redis'); // import redis
-const { promisify } = require('util');  //import promisify from util
+const { promisify } = require('util'); // import promisify from util
 
 class RedisClient {
   constructor() {
@@ -26,6 +26,7 @@ class RedisClient {
     this.client.expire(key, duration);
   }
 
+  // delete function
   async del(key) {
     this.client.del(key);
   }
